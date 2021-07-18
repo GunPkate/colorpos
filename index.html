@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Position</title>
+    <style>
+        body{ padding: 0; margin: 0; height: 200vh; }
+        .big{ width: 50%; height: 50%; }
+        .small{ width: 25%; height: 25%; }
+        .inside{ width: 10%; height: 10%; }
+        .absolute{ position: absolute; }
+        .relative{ position: relative; }
+        .fixed{ position: fixed; }
+        .top{ top: 0; }
+        .left{ left: 0; }
+        .right{ right: 0; }
+        .bottom{ bottom: 0; }
+        .center{ left: 50%; top: 50%; transform: translate(-50%,-50%); }
+        .red{ background-color: salmon; }
+        .green{ background-color: green; }
+        .blue{ background-color: royalblue; }
+        .yellow{ background-color: yellow; }
+        .pink{ background-color: deeppink; }
+        .white{ background-color: white; }
+    </style>
+</head>
+<body>
+    <div class="big white absolute top left">
+        <div class="red big relative"></div>
+        <div class="white big absolute right">
+            <!-- <div class="red small absolute relative top left "></div> -->
+        </div>
+    </div>
+
+    <div class="big white absolute top right">
+        <div class="big green  absolute top right"></div>
+        <div class="white big absolute left bottom">
+            <!-- <div class="green small absolute right top"></div> -->
+        </div>
+    </div>
+
+     <div class="big white absolute bottom right">
+        <div class="big yellow absolute bottom right"></div>
+        <div class="white big absolute left top">
+            <!-- <div class="yellow small absolute right bottom"></div> -->
+        </div>
+    </div> 
+
+     <div class="big white absolute bottom left">
+        <div class="big blue absolute bottom left"></div>
+        <div class="white big absolute right top">
+            <!-- <div class="blue small absolute left bottom"></div> -->
+        </div>
+    </div> 
+
+    <div class="big white fixed center">
+        <div class="inside red fixed top left">
+        <div class="inside green fixed top right">
+        <div class="inside blue fixed bottom left">
+        <div class="inside yellow fixed bottom right">
+    </div>
+    
+    <div class="pink inside fixed center"></div>
+</body>
+</html>
